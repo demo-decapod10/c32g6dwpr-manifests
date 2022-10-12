@@ -1,0 +1,13 @@
+# Source: cluster-api-aws/templates/rbac.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: c32g6dwpr-capi-aws
+  namespace: c32g6dwpr
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: c32g6dwpr-capi-aws
+subjects:
+- kind: ServiceAccount
+  name: c32g6dwpr-capi-aws
